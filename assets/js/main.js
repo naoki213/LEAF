@@ -17,4 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  function stripHashLater() {
+    if (!location.hash) return;
+    window.setTimeout(function () {
+      history.replaceState(null, "", location.pathname + location.search);
+    }, 1000);
+  }
+
+  stripHashLater();
+  window.addEventListener("hashchange", stripHashLater);
 });
