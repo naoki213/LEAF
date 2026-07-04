@@ -504,6 +504,159 @@ html.js-anim .reveal.is-visible {
   margin-top: 8px;
 }
 
+.pricing-more {
+  text-align: center;
+  margin: 28px 0 0;
+}
+
+.pricing-more a {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+/* ===== Monthly support plans (pricing.html) ===== */
+.btn-outline {
+  background: #fff;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.plan-card {
+  position: relative;
+  background: #fff;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.plan-card.is-featured {
+  order: -1;
+  border-color: var(--color-primary);
+  box-shadow: 0 20px 45px rgba(47, 125, 201, 0.18);
+}
+
+.plan-badge {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 6px 18px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.plan-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 0 0 8px;
+}
+
+.plan-price {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0 0 24px;
+}
+
+.plan-price span {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.plan-features {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  text-align: left;
+  border-top: 1px solid var(--color-border);
+}
+
+.plan-features li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 2px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.88rem;
+}
+
+.plan-feature-label {
+  color: var(--color-text-soft);
+  flex-shrink: 0;
+}
+
+.plan-feature-value {
+  font-weight: 700;
+  text-align: right;
+}
+
+.plan-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.plan-mark-triangle {
+  background: #fff3cf;
+  color: #a3760b;
+}
+
+.plan-mark-circle {
+  background: #e2f0ff;
+  color: var(--color-primary);
+}
+
+.plan-mark-double {
+  background: #e1f7ea;
+  color: #1c8a52;
+}
+
+.plan-hint {
+  margin: 12px 0 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.plan-footnote {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--color-text-soft);
+  margin-top: 28px;
+}
+
+@media (min-width: 900px) {
+  .plan-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .plan-card.is-featured {
+    order: 0;
+    transform: scale(1.05);
+    z-index: 1;
+  }
+}
+
 /* ===== Feature grid (選ばれる理由) ===== */
 .feature-grid {
   display: grid;
