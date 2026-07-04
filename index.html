@@ -3,61 +3,202 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>あなたのビジネスを最適なホームページで | 公開まで無料のホームページ制作</title>
+<title>LEAF | あなたのビジネスを最適なホームページで</title>
 <meta name="description" content="ご要望に合わせて丁寧に制作。公開まで無料、月額3,000円〜の安心サポート。スマホ対応・SEO対策も万全です。まずはお気軽にご相談ください。">
-<style>
-  :root {
-    --max-width: 480px;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: #f4f6f8;
-  }
-
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    -webkit-text-size-adjust: 100%;
-  }
-
-  main {
-    width: 100%;
-    max-width: var(--max-width);
-    background: #ffffff;
-  }
-
-  picture, img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  footer {
-    width: 100%;
-    max-width: var(--max-width);
-    background: #ffffff;
-    text-align: center;
-    padding: 16px 0 24px;
-    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", sans-serif;
-    font-size: 12px;
-    color: #999;
-  }
-</style>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2f7dc9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c-8 0-16 4-16 14 0 1 1 2 2 2C16 20 20 12 20 4z"></path><path d="M6 18C10 14 14 10 20 4"></path></svg>
+      <span>LEAF</span>
+    </a>
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav">
+      <a href="index.html">トップ</a>
+      <a href="index.html#pricing">料金プラン</a>
+      <a href="works.html">制作実例</a>
+      <a href="contact.html" class="nav-cta">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-  <img src="assets/images/section1.webp" alt="想いをカタチに、ビジネスをもっと加速させる。あなたのビジネスを最適なホームページで。ご要望に合わせて丁寧に制作します。公開まで無料！制作料（10ページまで）無料、月額3,000円〜。スマホ対応・SEO対策・安心のサポート体制。" width="864" height="1821" fetchpriority="high">
-  <img src="assets/images/section2.webp" alt="公開までずっと無料！ご満足いただけるまで何度でも制作・修正OK！制作の流れ：ヒアリング、ご提案・お見積り、デザイン制作、ご確認・修正、公開（納品）。シンプルでわかりやすい料金プラン。選ばれる理由：スマホ対応、SEO対策、安心のサポート体制、初めてでも安心。まずはお気軽にご相談ください。無料で相談する。" width="862" height="1825" loading="lazy">
+
+  <div class="hero-image">
+    <img src="assets/images/section1.webp" alt="想いをカタチに、ビジネスをもっと加速させる。あなたのビジネスを最適なホームページで。ご要望に合わせて丁寧に制作します。公開まで無料！制作料（10ページまで）無料、月額3,000円〜。スマホ対応・SEO対策・安心のサポート体制。" width="864" height="1821" fetchpriority="high">
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="section-badge">
+          ✨ 公開までずっと無料！
+        </div>
+        <h2 class="section-title">ご満足いただけるまで<br>何度でも<span class="accent">制作・修正OK！</span></h2>
+        <p class="section-desc">デザイン・内容にご納得いただけるまで費用は一切かかりません。<br>安心してご依頼ください。</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-3.8 7 8.5 8.5 0 0 1-9 .5L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 8.5-8.5h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          </div>
+          <div>
+            <p class="step-number">01</p>
+            <p class="step-title">ヒアリング</p>
+            <p class="step-desc">ご要望を丁寧にお伺いします</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4Z"></path></svg>
+          </div>
+          <div>
+            <p class="step-number">02</p>
+            <p class="step-title">ご提案・お見積り</p>
+            <p class="step-desc">最適なプランとお見積りをご提案</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <div>
+            <p class="step-number">03</p>
+            <p class="step-title">デザイン制作</p>
+            <p class="step-desc">ご要望に合わせて丁寧に制作します</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 11 15 16 9"></polyline></svg>
+          </div>
+          <div>
+            <p class="step-number">04</p>
+            <p class="step-title">ご確認・修正</p>
+            <p class="step-desc">ご納得いただけるまで何度でも修正OK</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <div>
+            <p class="step-number">05</p>
+            <p class="step-title">公開（納品）</p>
+            <p class="step-desc">ご満足いただけたら公開・納品します</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="section-bg-soft">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-badge">⚡ シンプルでわかりやすい料金プラン</div>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <span class="pricing-badge">今なら！</span>
+          <p class="pricing-label">制作料（10ページまで）</p>
+          <p class="pricing-price"><span class="highlight-underline">無料！</span></p>
+          <ul class="pricing-list">
+            <li>デザイン制作</li>
+            <li>コーディング</li>
+            <li>スマホ対応</li>
+            <li>フォーム設置 など</li>
+          </ul>
+          <p class="pricing-note">※11ページ以上はご相談ください</p>
+        </div>
+        <div class="pricing-card">
+          <p class="pricing-label">月額</p>
+          <p class="pricing-price">3,000円<small>〜</small></p>
+          <ul class="pricing-list">
+            <li>サーバー・ドメイン管理</li>
+            <li>保守・更新サポート</li>
+            <li>セキュリティ対策</li>
+            <li>バックアップ など</li>
+          </ul>
+          <p class="pricing-note">※プランにより内容が異なります</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="section-badge">🌿 選ばれる理由</div>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"></rect><line x1="11" y1="18" x2="13" y2="18"></line></svg>
+          </div>
+          <p class="feature-title">スマホ対応</p>
+          <p class="feature-desc">すべてのデバイスで見やすく最適化</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </div>
+          <p class="feature-title">SEO対策</p>
+          <p class="feature-desc">検索に強いサイト構造で集客をサポート</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+          </div>
+          <p class="feature-title">安心のサポート体制</p>
+          <p class="feature-desc">公開後も丁寧にサポートいたします</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.5" y2="9"></line><line x1="15" y1="9" x2="14.5" y2="9"></line></svg>
+          </div>
+          <p class="feature-title">初めてでも安心</p>
+          <p class="feature-desc">専門用語は使わず丁寧にご説明します</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-panel">
+        <div class="section-badge">📩 まずはお気軽にご相談ください</div>
+        <h2 class="section-title">ご相談・お見積りはすべて無料です</h2>
+        <p class="section-desc">あなたのビジネスに最適なホームページをご提案します！</p>
+        <a href="contact.html" class="btn btn-primary">無料で相談する →</a>
+      </div>
+    </div>
+  </section>
+
 </main>
-<footer>
-  &copy; 2026 LEAF
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="index.html" class="footer-logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c-8 0-16 4-16 14 0 1 1 2 2 2C16 20 20 12 20 4z"></path><path d="M6 18C10 14 14 10 20 4"></path></svg>
+      <span>LEAF</span>
+    </a>
+    <nav class="footer-nav">
+      <a href="index.html">トップ</a>
+      <a href="index.html#pricing">料金プラン</a>
+      <a href="works.html">制作実例</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 LEAF</p>
+  </div>
 </footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>

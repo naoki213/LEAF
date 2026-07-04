@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>お問い合わせ | LEAF</title>
+<meta name="description" content="ホームページ制作のご相談・お見積りは無料です。お気軽にお問い合わせください。">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2f7dc9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c-8 0-16 4-16 14 0 1 1 2 2 2C16 20 20 12 20 4z"></path><path d="M6 18C10 14 14 10 20 4"></path></svg>
+      <span>LEAF</span>
+    </a>
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav">
+      <a href="index.html">トップ</a>
+      <a href="index.html#pricing">料金プラン</a>
+      <a href="works.html">制作実例</a>
+      <a href="contact.html" class="nav-cta">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1>お問い合わせ</h1>
+      <p>ご相談・お見積りはすべて無料です。お気軽にご連絡ください。</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h3>メールでのお問い合わせ</h3>
+          <p>フォームのご利用が難しい場合は、下記メールアドレスへ直接ご連絡いただくことも可能です。</p>
+          <a class="contact-mail" href="mailto:gamba0412@gmail.com">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 6-10 7L2 6"></path></svg>
+            gamba0412@gmail.com
+          </a>
+          <p style="margin-top:20px;">通常1〜2営業日以内にご返信いたします。</p>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <label for="name">お名前<span class="required">必須</span></label>
+            <input type="text" id="name" name="name" required placeholder="山田 太郎">
+          </div>
+          <div class="form-row">
+            <label for="company">会社名・屋号</label>
+            <input type="text" id="company" name="company" placeholder="株式会社LEAF">
+          </div>
+          <div class="form-row">
+            <label for="email">メールアドレス<span class="required">必須</span></label>
+            <input type="email" id="email" name="email" required placeholder="example@mail.com">
+          </div>
+          <div class="form-row">
+            <label for="tel">お電話番号</label>
+            <input type="tel" id="tel" name="tel" placeholder="090-1234-5678">
+          </div>
+          <div class="form-row">
+            <label for="type">お問い合わせ種別<span class="required">必須</span></label>
+            <select id="type" name="type" required>
+              <option value="新規のご相談">新規のご相談</option>
+              <option value="お見積り依頼">お見積り依頼</option>
+              <option value="既存サイトの修正・更新">既存サイトの修正・更新</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">お問い合わせ内容<span class="required">必須</span></label>
+            <textarea id="message" name="message" rows="6" required placeholder="ご相談内容をご記入ください"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">送信する →</button>
+          <p class="form-note">送信ボタンを押すと、入力内容が反映されたメールが起動します。内容をご確認のうえ送信してください。</p>
+          <p class="form-status" id="form-status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="index.html" class="footer-logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c-8 0-16 4-16 14 0 1 1 2 2 2C16 20 20 12 20 4z"></path><path d="M6 18C10 14 14 10 20 4"></path></svg>
+      <span>LEAF</span>
+    </a>
+    <nav class="footer-nav">
+      <a href="index.html">トップ</a>
+      <a href="index.html#pricing">料金プラン</a>
+      <a href="works.html">制作実例</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 LEAF</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/contact.js"></script>
+</body>
+</html>
