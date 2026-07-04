@@ -276,6 +276,56 @@ section {
   height: auto;
 }
 
+html.js-anim .hero-image img {
+  animation: hero-fade-in 0.9s ease both;
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== Scroll reveal ===== */
+html.js-anim .reveal {
+  opacity: 0;
+  translate: 0 28px;
+  transition: opacity 0.7s ease, translate 0.7s ease;
+}
+
+html.js-anim .reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.steps .step.reveal:nth-child(2) { transition-delay: 90ms; }
+.steps .step.reveal:nth-child(3) { transition-delay: 180ms; }
+.steps .step.reveal:nth-child(4) { transition-delay: 270ms; }
+.steps .step.reveal:nth-child(5) { transition-delay: 360ms; }
+
+.pricing-grid .pricing-card.reveal:nth-child(2) { transition-delay: 120ms; }
+
+.feature-grid .feature-card.reveal:nth-child(2) { transition-delay: 80ms; }
+.feature-grid .feature-card.reveal:nth-child(3) { transition-delay: 160ms; }
+.feature-grid .feature-card.reveal:nth-child(4) { transition-delay: 240ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-anim .hero-image img {
+    animation: none;
+  }
+
+  html.js-anim .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* ===== Process steps ===== */
 .steps {
   display: grid;
