@@ -27,4 +27,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
   stripHashLater();
   window.addEventListener("hashchange", stripHashLater);
+
+  var stickyCta = document.querySelector(".sticky-cta");
+  if (stickyCta) {
+    var lastScrollY = window.scrollY;
+    var ticking = false;
+
+    function updateStickyCta() {
+      var currentScrollY = window.scrollY;
+      var scrollingDown = currentScrollY > lastScrollY;
+
+      if (scrollingDown && currentScrollY > 80) {
+        stickyCta.classList.add("is-hidden");
+      } else {
+        stickyCta.classList.remove("is-hidden");
+      }
+
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (!ticking) {
+          window.requestAnimationFrame(updateStickyCta);
+          ticking = true;
+        }
+      },
+      { passive: true }
+    );
+  }
 });

@@ -1110,6 +1110,12 @@ a.work-card:focus-visible {
   display: block;
   padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
   text-decoration: none;
+  transform: translateY(0);
+  transition: transform 0.25s ease;
+}
+
+.sticky-cta.is-hidden {
+  transform: translateY(120%);
 }
 
 .sticky-cta img {
