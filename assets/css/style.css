@@ -424,6 +424,27 @@ html.js-anim .reveal.is-visible {
   }
 }
 
+/* ===== Pricing (mobile image swap) ===== */
+.pricing-mobile-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pricing-desktop-only {
+  display: none;
+}
+
+@media (min-width: 860px) {
+  .pricing-mobile-image {
+    display: none;
+  }
+
+  .pricing-desktop-only {
+    display: block;
+  }
+}
+
 /* ===== Pricing ===== */
 .pricing-grid {
   display: grid;
