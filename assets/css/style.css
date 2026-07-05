@@ -987,6 +987,45 @@ a.work-card:focus-visible {
   min-height: 1.2em;
 }
 
+/* ===== Sticky bottom CTA ===== */
+.sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+  display: block;
+  padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+  text-decoration: none;
+}
+
+.sticky-cta img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 999px;
+  box-shadow: 0 10px 26px rgba(31, 95, 158, 0.35);
+  transition: transform 0.15s ease;
+}
+
+.sticky-cta:active img {
+  transform: scale(0.98);
+}
+
+body.has-sticky-cta .site-footer {
+  padding-bottom: 104px;
+}
+
+@media (min-width: 860px) {
+  .sticky-cta {
+    display: none;
+  }
+
+  body.has-sticky-cta .site-footer {
+    padding-bottom: 40px;
+  }
+}
+
 /* ===== Footer ===== */
 .site-footer {
   background: #1c2733;
