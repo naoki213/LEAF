@@ -447,6 +447,29 @@ html.js-anim .reveal.is-visible {
   }
 }
 
+/* ===== Features (mobile image swap) ===== */
+.features-mobile-image {
+  display: block;
+  width: calc(100% + 40px);
+  max-width: none;
+  height: auto;
+  margin: 0 -20px;
+}
+
+.features-desktop-only {
+  display: none;
+}
+
+@media (min-width: 860px) {
+  .features-mobile-image {
+    display: none;
+  }
+
+  .features-desktop-only {
+    display: block;
+  }
+}
+
 /* ===== Pricing ===== */
 .pricing-grid {
   display: grid;
