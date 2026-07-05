@@ -570,7 +570,13 @@ html.js-anim .reveal.is-visible {
   font-size: 1.9rem;
   font-weight: 800;
   color: var(--color-primary);
-  margin: 0 0 24px;
+  margin: 0;
+}
+
+.plan-price-note {
+  font-size: 0.75rem;
+  color: var(--color-text-soft);
+  margin: 4px 0 24px;
 }
 
 .plan-price span {
