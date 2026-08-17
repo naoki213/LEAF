@@ -2,9 +2,7 @@ backend:
   name: github
   repo: naoki213/LEAF
   branch: claude/website-image-mobile-rcahp8
-  # ↓ ここを自分で用意した無料の認証プロキシ（Cloudflare Worker）のURLに書き換えてください。
-  # 手順はプロジェクトのREADME（CMSセットアップ手順）を参照してください。
-  base_url: https://REPLACE-WITH-YOUR-OAUTH-WORKER.workers.dev
+  base_url: https://leaf-cms-auth.gamba0412.workers.dev
   auth_endpoint: auth
 
 locale: ja
