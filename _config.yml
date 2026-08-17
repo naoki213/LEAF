@@ -1,0 +1,23 @@
+title: LEAF
+description: "ホームページ制作のLEAF"
+site_url: "https://naoki213.github.io/LEAF"
+
+collections:
+  news:
+    output: true
+  notices:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: news-article
+      is_article: true
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules

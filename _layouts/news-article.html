@@ -1,14 +1,30 @@
----
----
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>お知らせ | LEAF</title>
-<meta name="description" content="LEAFからのお知らせ・ご案内をまとめています。">
+<title>{{ page.title }} | LEAF</title>
+<meta name="description" content="{{ page.description | escape }}">
+<link rel="canonical" href="{{ site.site_url }}{{ page.url }}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.og_description | default: page.description | escape }}">
+<meta property="og:url" content="{{ site.site_url }}{{ page.url }}">
+<meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="assets/css/style.css">
 <script>if ("scrollRestoration" in history) { history.scrollRestoration = "manual"; }</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.headline | default: page.title | jsonify }},
+  "description": {{ page.og_description | default: page.description | jsonify }},
+  "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+  "author": { "@type": "Organization", "name": "LEAF" },
+  "publisher": { "@type": "Organization", "name": "LEAF" },
+  "mainEntityOfPage": "{{ site.site_url }}{{ page.url }}"
+}
+</script>
 </head>
 <body class="has-sticky-cta">
 
@@ -36,34 +52,24 @@
 
   <div class="page-hero">
     <div class="container">
-      <h1>お知らせ</h1>
-      <p>LEAFからの最新のお知らせ・ご案内をまとめています。</p>
+      <div class="article-hero-meta">
+        <span class="news-date-badge">
+          <span class="news-date-month">{{ page.date | date: "%-m月" }}</span>
+          <span class="news-date-day">{{ page.date | date: "%-d" }}</span>
+        </span>
+        <span class="news-tag">{{ page.tag_icon }} {{ page.tag }}</span>
+      </div>
+      <h1>{{ page.hero_title | default: page.title }}</h1>
+      <p>{{ page.hero_lead | default: page.excerpt }}</p>
     </div>
   </div>
 
   <section>
     <div class="container">
-      <div class="news-timeline">
-        {% assign news_items = site.news | concat: site.notices | sort: "date" | reverse %}
-        {% for item in news_items %}
-        <article class="news-item" id="notice-{{ item.date | date: '%Y%m%d' }}">
-          <span class="news-marker-dot"></span>
-          <div class="news-card">
-            <div class="news-meta">
-              <span class="news-date-badge">
-                <span class="news-date-month">{{ item.date | date: "%-m月" }}</span>
-                <span class="news-date-day">{{ item.date | date: "%-d" }}</span>
-              </span>
-              <span class="news-tag">{{ item.tag_icon }} {{ item.tag }}</span>
-            </div>
-            <h2 class="news-title">{{ item.title }}</h2>
-            <p class="news-body">{{ item.excerpt }}</p>
-            {% if item.is_article %}
-            <a class="news-readmore" href="{{ item.url | remove_first: '/' }}">続きを読む<span aria-hidden="true">›</span></a>
-            {% endif %}
-          </div>
-        </article>
-        {% endfor %}
+      <div class="article-content">
+        <a href="news.html" class="article-back-link">‹ お知らせ一覧に戻る</a>
+
+        {{ content }}
       </div>
     </div>
   </section>
@@ -72,8 +78,8 @@
     <div class="container">
       <div class="cta-panel">
         <div class="section-badge">📩 まずはお気軽にご相談ください</div>
-        <h2 class="section-title">ご相談・お見積りはすべて無料です</h2>
-        <p class="section-desc">あなたのビジネスに最適なホームページをご提案します！</p>
+        <h2 class="section-title">{{ page.cta_title | default: "まずはお気軽にご相談ください" }}</h2>
+        <p class="section-desc">ご相談・お見積りはすべて無料です。どんな小さなことでもお気軽にどうぞ。</p>
         <a href="contact.html" class="btn btn-primary">無料で相談する →</a>
       </div>
     </div>
