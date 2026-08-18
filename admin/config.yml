@@ -30,7 +30,24 @@ collections:
       - { label: "タグ名", name: tag, widget: string, default: "SEOコラム" }
       - { label: "URL（例: /example-page.html の形式で入力）", name: permalink, widget: string }
       - { label: "下部CTAの見出し（省略可）", name: cta_title, widget: string, required: false }
-      - { label: "本文", name: body, widget: markdown }
+      - { label: "本文（導入文・見出しなど。HTMLを書かなくても大丈夫です）", name: body, widget: markdown }
+      - { label: "コツ・ポイントのリスト見出し（省略可・例: 今日からできる！基本の3つ ✅）", name: tips_heading, widget: string, required: false }
+      - { label: "リストの前に表示する一言（省略可）", name: tips_intro, widget: string, required: false }
+      - label: "コツ・ポイントの項目（省略可・番号付きカードで表示されます）"
+        name: tips
+        widget: list
+        required: false
+        collapsed: true
+        summary: "{{fields.title}}"
+        fields:
+          - { label: "タイトル", name: title, widget: string }
+          - { label: "説明文", name: body, widget: text }
+      - { label: "まとめボックスの見出し（省略可）", name: callout_heading, widget: string, required: false }
+      - { label: "まとめボックスの本文（省略可・入力すると表示されます）", name: callout_body, widget: text, required: false }
+      - { label: "まとめボックスのボタン文言（省略可）", name: callout_button_label, widget: string, required: false }
+      - { label: "まとめボックスのボタン先URL（省略可・例: pricing.html）", name: callout_button_url, widget: string, required: false }
+      - { label: "まとめの見出し（省略可・デフォルト「まとめ」）", name: summary_heading, widget: string, required: false }
+      - { label: "まとめの本文（省略可）", name: summary_body, widget: text, required: false }
 
   - name: notices
     label: "お知らせ（短い告知）"

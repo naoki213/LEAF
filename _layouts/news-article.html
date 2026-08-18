@@ -70,6 +70,41 @@
         <a href="news.html" class="article-back-link">‹ お知らせ一覧に戻る</a>
 
         {{ content }}
+
+        {% if page.tips %}
+        <div class="article-section">
+          {% if page.tips_heading %}<h2>{{ page.tips_heading }}</h2>{% endif %}
+          {% if page.tips_intro %}<p>{{ page.tips_intro }}</p>{% endif %}
+          <div class="article-tip-list">
+            {% for tip in page.tips %}
+            <div class="article-tip">
+              <div class="article-tip-head">
+                <span class="article-tip-num">{{ forloop.index }}</span>
+                <span class="article-tip-title">{{ tip.title }}</span>
+              </div>
+              <p>{{ tip.body }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        {% if page.callout_body %}
+        <div class="article-callout">
+          {% if page.callout_heading %}<h2>{{ page.callout_heading }}</h2>{% endif %}
+          <p>{{ page.callout_body }}</p>
+          {% if page.callout_button_url %}
+          <a href="{{ page.callout_button_url }}" class="btn btn-outline">{{ page.callout_button_label | default: "詳しく見る ›" }}</a>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {% if page.summary_body %}
+        <div class="article-section">
+          <h2>{{ page.summary_heading | default: "まとめ" }}</h2>
+          <p>{{ page.summary_body }}</p>
+        </div>
+        {% endif %}
       </div>
     </div>
   </section>
