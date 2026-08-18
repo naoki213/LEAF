@@ -20,7 +20,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{hour}}{{minute}}{{second}}"
     fields:
       - { label: "タイトル", name: title, widget: string }
-      - { label: "公開日", name: date, widget: datetime, format: "YYYY-MM-DDTHH:mm:ss.SSS[Z]", date_format: "YYYY-MM-DD", time_format: false, default: "{{now}}" }
+      - { label: "公開日", name: date, widget: date, format: "YYYY-MM-DD", default: "{{now}}", required: true }
       - { label: "内容", name: body, widget: markdown }
       - { name: tag_icon, widget: hidden, default: "📝" }
       - { name: tag, widget: hidden, default: "管理者ブログ" }
