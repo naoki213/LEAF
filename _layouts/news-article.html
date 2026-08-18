@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
+{% assign article_date = page.date %}
+{% assign plain_body = content | strip_html | strip_newlines | replace: '  ', ' ' %}
+{% if page.description %}
+  {% assign auto_description = page.description %}
+{% else %}
+  {% assign auto_description = plain_body | truncate: 120 %}
+{% endif %}
+{% assign auto_og_description = page.og_description | default: auto_description %}
+{% assign auto_excerpt = plain_body | truncate: 90 %}
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>{{ page.title }} | LEAF</title>
-<meta name="description" content="{{ page.description | escape }}">
+<meta name="description" content="{{ auto_description | escape }}">
 <link rel="canonical" href="{{ site.site_url }}{{ page.url }}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{{ page.title | escape }}">
-<meta property="og:description" content="{{ page.og_description | default: page.description | escape }}">
+<meta property="og:description" content="{{ auto_og_description | escape }}">
 <meta property="og:url" content="{{ site.site_url }}{{ page.url }}">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="assets/css/style.css">
@@ -18,8 +27,8 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": {{ page.headline | default: page.title | jsonify }},
-  "description": {{ page.og_description | default: page.description | jsonify }},
-  "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+  "description": {{ auto_og_description | jsonify }},
+  "datePublished": "{{ article_date | date: '%Y-%m-%d' }}",
   "author": { "@type": "Organization", "name": "LEAF" },
   "publisher": { "@type": "Organization", "name": "LEAF" },
   "mainEntityOfPage": "{{ site.site_url }}{{ page.url }}"
@@ -54,13 +63,13 @@
     <div class="container">
       <div class="article-hero-meta">
         <span class="news-date-badge">
-          <span class="news-date-month">{{ page.date | date: "%-m月" }}</span>
-          <span class="news-date-day">{{ page.date | date: "%-d" }}</span>
+          <span class="news-date-month">{{ article_date | date: "%-m月" }}</span>
+          <span class="news-date-day">{{ article_date | date: "%-d" }}</span>
         </span>
         <span class="news-tag">{{ page.tag_icon }} {{ page.tag }}</span>
       </div>
       <h1>{{ page.hero_title | default: page.title }}</h1>
-      <p>{{ page.hero_lead | default: page.excerpt }}</p>
+      <p>{{ page.hero_lead | default: auto_excerpt }}</p>
     </div>
   </div>
 

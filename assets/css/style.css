@@ -1846,3 +1846,45 @@ body.has-sticky-cta .site-footer {
 .article-related-list li:last-child {
   margin-bottom: 0;
 }
+
+/* Fallback typography for plain rich-text article bodies (no manual HTML structure) */
+.article-content > p:not(.article-lead) {
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: var(--color-text);
+  margin: 0 0 20px;
+}
+
+.article-content > h2 {
+  font-size: clamp(1.2rem, 4.5vw, 1.4rem);
+  font-weight: 800;
+  margin: 32px 0 16px;
+  line-height: 1.5;
+}
+
+.article-content > h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 24px 0 12px;
+}
+
+.article-content > ul,
+.article-content > ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+
+.article-content > ul li,
+.article-content > ol li {
+  margin-bottom: 8px;
+  line-height: 1.8;
+  font-size: 0.98rem;
+}
+
+.article-content > p a,
+.article-content > ul a,
+.article-content > ol a {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: underline;
+}

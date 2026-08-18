@@ -46,6 +46,11 @@
       <div class="news-timeline">
         {% assign news_items = site.news | concat: site.notices | sort: "date" | reverse %}
         {% for item in news_items %}
+        {% if item.excerpt contains '<p>' %}
+          {% capture item_excerpt %}{{ item.excerpt | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 90 }}{% endcapture %}
+        {% else %}
+          {% assign item_excerpt = item.excerpt %}
+        {% endif %}
         <article class="news-item" id="notice-{{ item.date | date: '%Y%m%d' }}">
           <span class="news-marker-dot"></span>
           <div class="news-card">
@@ -57,7 +62,7 @@
               <span class="news-tag">{{ item.tag_icon }} {{ item.tag }}</span>
             </div>
             <h2 class="news-title">{{ item.title }}</h2>
-            <p class="news-body">{{ item.excerpt }}</p>
+            <p class="news-body">{{ item_excerpt }}</p>
             {% if item.is_article %}
             <a class="news-readmore" href="{{ item.url | remove_first: '/' }}">続きを読む<span aria-hidden="true">›</span></a>
             {% endif %}

@@ -1,10 +1,12 @@
 title: LEAF
 description: "ホームページ制作のLEAF"
 site_url: "https://naoki213.github.io/LEAF"
+future: true
 
 collections:
   news:
     output: true
+    permalink: /:path.html
   notices:
     output: false
 

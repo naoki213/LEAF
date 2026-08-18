@@ -12,53 +12,15 @@ public_folder: "assets/images/uploads"
 
 collections:
   - name: news
-    label: "SEOコラム記事"
+    label: "管理者ブログ"
     label_singular: "記事"
     folder: "_news"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}{{minute}}{{second}}"
     fields:
       - { label: "タイトル", name: title, widget: string }
-      - { label: "JSON-LD用の見出し（省略時はタイトルと同じ）", name: headline, widget: string, required: false }
-      - { label: "ページ上部の見出し（<br>で改行できます）", name: hero_title, widget: string, required: false }
-      - { label: "見出し下のリード文", name: hero_lead, widget: string, required: false }
-      - { label: "検索結果に表示される説明文（meta description）", name: description, widget: text }
-      - { label: "SNSシェア用の説明文（省略可・短め推奨）", name: og_description, widget: text, required: false }
-      - { label: "お知らせ一覧に表示する要約", name: excerpt, widget: text }
-      - { label: "公開日", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "タグの絵文字", name: tag_icon, widget: string, default: "📝" }
-      - { label: "タグ名", name: tag, widget: string, default: "SEOコラム" }
-      - { label: "URL（例: /example-page.html の形式で入力）", name: permalink, widget: string }
-      - { label: "下部CTAの見出し（省略可）", name: cta_title, widget: string, required: false }
-      - { label: "本文（導入文・見出しなど。HTMLを書かなくても大丈夫です）", name: body, widget: markdown }
-      - { label: "コツ・ポイントのリスト見出し（省略可・例: 今日からできる！基本の3つ ✅）", name: tips_heading, widget: string, required: false }
-      - { label: "リストの前に表示する一言（省略可）", name: tips_intro, widget: string, required: false }
-      - label: "コツ・ポイントの項目（省略可・番号付きカードで表示されます）"
-        name: tips
-        widget: list
-        required: false
-        collapsed: true
-        summary: "{{fields.title}}"
-        fields:
-          - { label: "タイトル", name: title, widget: string }
-          - { label: "説明文", name: body, widget: text }
-      - { label: "まとめボックスの見出し（省略可）", name: callout_heading, widget: string, required: false }
-      - { label: "まとめボックスの本文（省略可・入力すると表示されます）", name: callout_body, widget: text, required: false }
-      - { label: "まとめボックスのボタン文言（省略可）", name: callout_button_label, widget: string, required: false }
-      - { label: "まとめボックスのボタン先URL（省略可・例: pricing.html）", name: callout_button_url, widget: string, required: false }
-      - { label: "まとめの見出し（省略可・デフォルト「まとめ」）", name: summary_heading, widget: string, required: false }
-      - { label: "まとめの本文（省略可）", name: summary_body, widget: text, required: false }
-
-  - name: notices
-    label: "お知らせ（短い告知）"
-    label_singular: "お知らせ"
-    folder: "_notices"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "タイトル", name: title, widget: string }
-      - { label: "トップページの案内バー用の短いタイトル（省略可）", name: short_title, widget: string, required: false }
-      - { label: "本文（お知らせ一覧にそのまま表示されます）", name: excerpt, widget: text }
-      - { label: "公開日", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "タグの絵文字", name: tag_icon, widget: string, default: "📢" }
-      - { label: "タグ名", name: tag, widget: string, default: "お知らせ" }
+      - { label: "内容", name: body, widget: markdown }
+      - { name: date, widget: hidden, default: "{{now}}" }
+      - { name: tag_icon, widget: hidden, default: "📝" }
+      - { name: tag, widget: hidden, default: "管理者ブログ" }
